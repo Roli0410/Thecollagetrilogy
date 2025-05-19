@@ -1,0 +1,33 @@
+body{
+    background-image: url(grammy.png) ;
+    padding: 0;
+    justify-content: center;
+    display:  flex;
+    justify-content: center;
+    animation: loading 1s;
+}
+
+table{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;} 
+
+#elem1, #elem2, #elem3 {
+    padding: 15px;
+    transition: transform, 0.5s, filter 0.5s;
+    transform: scale(1.0);
+    filter: brightness(1.0);
+    image-rendering: auto;
+    will-change: transform, filter;
+    border-radius: 10px;
+}
+ #elem1:hover, #elem2:hover, #elem3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(205,175,69, 0.3);
+    filter: brightness(0.8);
+ }
+ @keyframes loading {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} 
