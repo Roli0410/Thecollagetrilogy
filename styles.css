@@ -1,33 +1,63 @@
-body{
-    background-image: url(grammy.png) ;
+body {
+    background-image: url(grammy.png);
     padding: 0;
     justify-content: center;
-    display:  flex;
+    display: flex;
     justify-content: center;
     animation: loading 1s;
 }
 
-table{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;} 
-
-#elem1, #elem2, #elem3 {
-    padding: 15px;
-    transition: transform, 0.5s, filter 0.5s;
-    transform: scale(1.0);
-    filter: brightness(1.0);
-    image-rendering: auto;
-    will-change: transform, filter;
-    border-radius: 10px;
+img {
+    width: 250%;
+    box-shadow: 6px 10px 30px rgb(0, 0, 0);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
- #elem1:hover, #elem2:hover, #elem3:hover {
+
+.container {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+    animation: fadeIn 1.0s ease-in;
+}
+
+.left,
+.center,
+.right {
+    padding: 20px;
+}
+
+.left {
+    width: 33%;
+}
+
+.center {
+    width: 33%;
+}
+
+.right {
+    width: 33%;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(205,175,69, 0.3);
-    filter: brightness(0.8);
- }
- @keyframes loading {
-    from { opacity: 0; }
-    to { opacity: 1; }
-} 
+    box-shadow: 6px 10px 30px rgb(0, 0, 0);
+}
